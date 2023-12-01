@@ -55,3 +55,22 @@ Console.WriteLine($"Количество чисел, которые оканчи
 // числа, сумма цифр которого четная.
 // 5 12 16 q [STOP]
 // 3 45 342 15 [STOP]
+// Создаем функцию по вводу размера массива
+int ReadInt(string text)
+    {
+        System.Console.Write(text);
+        return Convert.ToInt32(Console.ReadLine());
+    }
+
+    int[] GenerateArray(int size, int leftRange, int rightRange)
+    {
+        int[] tempArray = new int[size];
+        Random rand = new Random();
+
+        for (int i = 0; i < size; i++)
+    {
+        tempArray[i] = rand.Next(leftRange, rightRange + 1);
+    }
+
+    return tempArray;
+    }
